@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EMMA-TECH - Reparação de Computadores e Eletrônicos, Desbloqueio de Telemóveis, Serviços PS3, Venda de Jogos, Instalação de Sistemas Operativos. Assistência Técnica Especializada em Luanda.">
+    <meta name="keywords" content="reparação de computadores, desbloqueio de telemóvel, serviços PS3, venda de jogos, sistemas operativos, assistência técnica, Luanda">
+    <title>EMMATECH - Reparação Computadores e Eletrônicos | Serviços Técnicos Especializados</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --teal-primary: #14B8A6;
+            --teal-dark: #0D9488;
+            --gray-dark: #1F2937;
+            --gray-darker: #111827;
+            --gray-medium: #6B7280;
+            --gray-light: #F9FAFB;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-darker);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-family: 'Pacifico', serif;
+            font-size: 2rem;
+            color: var(--teal-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-darker);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal-primary);
+        }
+
+        .btn-call {
+            background: var(--teal-primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-call:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--gray-darker);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://readdy.ai/api/search-image?query=Modern technology repair workshop with computers smartphones and electronic devices on clean white workbench professional lighting minimalist background with blue and teal accents high-tech atmosphere&width=1920&height=1080&seq=hero-tech-repair&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Pacifico', serif;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--teal-primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
+        }
+
+        .hero-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-card i {
+            font-size: 2.5rem;
+            color: var(--teal-primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-card h3 {
+            color: var(--gray-darker);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .hero-card p {
+            color: var(--gray-medium);
+            font-size: 0.95rem;
+        }
+
+        /* Services Section */
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--gray-darker);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gray-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-card:nth-child(even) .service-content {
+            direction: ltr;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 300px;
+        }
+
+        .service-content {
+            padding: 3rem;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--teal-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon i {
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .service-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--gray-darker);
+        }
+
+        .service-content p {
+            color: var(--gray-medium);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--gray-medium);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li i {
+            color: var(--teal-primary);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+            padding: 6rem 5%;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-darker);
+        }
+
+        .about-text p {
+            color: var(--gray-medium);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-card {
+            background: var(--gray-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--teal-primary);
+        }
+
+        .highlight-card i {
+            font-size: 2rem;
+            color: var(--teal-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--gray-darker);
+        }
+
+        .highlight-card p {
+            color: var(--gray-medium);
+            font-size: 0.9rem;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image-card {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .about-image-card h3 {
+            font-size: 2rem;
+            color: var(--teal-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .about-image-card p {
+            color: var(--gray-medium);
+            font-size: 0.9rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: var(--teal-primary);
+            transform: translateY(-5px);
+        }
+
+        .stat-card:hover h3,
+        .stat-card:hover p {
+            color: var(--white);
+        }
+
+        .stat-card h3 {
+            font-size: 3rem;
+            color: var(--teal-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: var(--gray-medium);
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--gray-dark);
+            padding: 6rem 5%;
+            color: var(--white);
+        }
+
+        .contact .section-header h2,
+        .contact .section-header p {
+            color: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--teal-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon i {
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .contact-item-content h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item-content p {
+            color: var(--gray-medium);
+        }
+
+        .contact-item-content a {
+            color: var(--teal-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item-content a:hover {
+            color: var(--white);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form h3 {
+            color: var(--gray-darker);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--gray-darker);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            color: var(--gray-darker);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--teal-primary);
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .btn-submit {
+            background: var(--teal-primary);
+            color: var(--white);
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-darker);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: var(--gray-medium);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--teal-primary);
+        }
+
+        .footer-logo {
+            font-family: 'Pacifico', serif;
+            font-size: 2rem;
+            color: var(--teal-primary);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--teal-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-dark);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--gray-medium);
+        }
+
+        .footer-bottom a {
+            color: var(--teal-primary);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Agent Widget */
+        .agent-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .agent-button {
+            width: 60px;
+            height: 60px;
+            background: var(--teal-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .agent-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(20, 184, 166, 0.6);
+        }
+
+        .agent-button i {
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .service-card,
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card:nth-child(even) {
+                direction: ltr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image-card {
+                position: static;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://static.readdy.ai/image/8b9a0b0f5cf173245518d425b18f7f9f/73c78e0546597eb5d8d9cc291dacf58d.jpeg" alt="EMMATECH Logo">
+                <a href="#home" class="logo-text">EMMATECH</a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#services">Os nossos Serviços</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="tel:+244939601868" class="btn-call"><i class="ri-phone-line"></i> Ligar Agora</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    Hero Section --> 
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>EMMATECH</h1>
+            <p class="hero-subtitle">Reparação de Computadores e Eletrônicos</p>
+            <p class="hero-description">Soluções técnicas especializadas para todos os seus dispositivos. Assistência rápida, profissional e confiável em Luanda.</p>
+            
+            <div class="hero-buttons">
+                <a href="tel:+244939601868" class="btn-primary">
+                    <i class="ri-phone-line"></i> +244 939 601 868
+                </a>
+                <a href="mailto:contato@emmatechnologya@gmail.com" class="btn-secondary">
+                    <i class="ri-mail-line"></i> Enviar Email
+                </a>
+            </div>
+
+            <div class="hero-cards">
+                <div class="hero-card">
+                    <i class="ri-customer-service-2-line"></i>
+                    <h3>Suporte 24/7</h3>
+                    <p>Assistência técnica disponível quando você precisar</p>
+                </div>
+                <div class="hero-card">
+                    <i class="ri-shield-check-line"></i>
+                    <h3>Garantia de Qualidade</h3>
+                    <p>Serviços certificados com garantia de satisfação</p>
+                </div>
+                <div class="hero-card">
+                    <i class="ri-time-line"></i>
+                    <h3>Atendimento Rápido</h3>
+                    <p>Reparações eficientes no menor tempo possível</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Os nossos Serviços</h2>
+                <p>Oferecemos uma gama completa de serviços técnicos especializados para atender todas as suas necessidades tecnológicas</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <img src="https://readdy.ai/api/search-image?query=Computer repair technician working on laptop motherboard with precision tools clean white background professional lighting blue and teal color scheme modern workspace&width=600&height=400&seq=computer-repair&orientation=landscape" alt="Reparação de Computadores" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="ri-computer-line"></i>
+                        </div>
+                        <h3>Reparação de Computadores</h3>
+                        <p>Especialistas em diagnóstico e reparação de computadores ‘desktop’ e portáteis. Resolvemos problemas de “hardware” e “software” com eficiência.</p>
+                        <ul class="service-features">
+                            <li><i class="ri-check-line"></i> Substituição de componentes</li>
+                            <li><i class="ri-check-line"></i> Limpeza e manutenção</li>
+                            <li><i class="ri-check-line"></i> Atualização de “hardware”</li>
+                            <li><i class="ri-check-line"></i> Recuperação de dados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <img src="https://readdy.ai/api/search-image?query=Smartphone screen unlock repair service with modern mobile devices on clean white surface professional tools blue lighting technology workspace minimalist background&width=600&height=400&seq=phone-unlock&orientation=landscape" alt="Desbloqueio de Telemóveis" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="ri-smartphone-line"></i>
+                        </div>
+                        <h3>Desbloqueio de Telemóveis</h3>
+                        <p>Serviço profissional de desbloqueio de telemóveis de todas as marcas. Rápido, seguro e com garantia.</p>
+                        <ul class="service-features">
+                            <li><i class="ri-check-line"></i> Desbloqueio de operadora</li>
+                            <li><i class="ri-check-line"></i> Remoção de conta Google</li>
+                            <li><i class="ri-check-line"></i> Restauração de sistema</li>
+                            <li><i class="ri-check-line"></i> Reparação de ecrã</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <img src="https://readdy.ai/api/search-image?query=PlayStation 3 console repair and gaming setup with controllers and games on modern white desk blue ambient lighting clean professional workspace technology theme&width=600&height=400&seq=ps3-service&orientation=landscape" alt="Serviços PlayStation 3" class="service-image">
+                    <div class="service-icon">
+                        <i class="ri-gamepad-line"></i>
+                    </div>
+                    <h3>Serviços PlayStation 3</h3>
+                    <p>Especialistas em reparação e manutenção de PlayStation 3. Também oferecemos venda de jogos originais e desbloqueio.</p>
+                    <ul class="service-features">
+                        <li><i class="ri-check-line"></i> Reparação de consolas</li>
+                        <li><i class="ri-check-line"></i> Venda de jogos originais</li>
+                        <li><i class="ri-check-line"></i> Desbloqueio de PS3</li>
+                        <li><i class="ri-check-line"></i> Limpeza e manutenção</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <img alt="Instalação de Sistemas Operativos"
+                         class="service-image" src="https://readdy.ai/api/search-image?query=Operating system installation with multiple OS logos Windows Linux macOS on computer screen clean modern workspace blue and white color scheme professional setup&width=600&height=400&seq=os-install&orientation=landscape">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="ri-windows-line"></i>
+                        </div>
+                        <h3>Sistemas Operativos</h3>
+                        <p>Instalação e configuração profissional de sistemas operativos Windows, Linux e macOS. “Software” sempre atualizado.</p>
+                        <ul class="service-features">
+                            <li><i class="ri-check-line"></i> Instalação de Windows</li>
+                            <li><i class="ri-check-line"></i> Instalação de Linux</li>
+                            <li><i class="ri-check-line"></i> Atualização de sistema</li>
+                            <li><i class="ri-check-line"></i> Configuração personalizada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre a EMMATECH</h2>
+                    <p>Somos uma empresa especializada em reparação de computadores, telemóveis e eletrônicos em Luanda. Com anos de experiência no mercado, oferecemos serviços técnicos de qualidade superior.</p>
+                    <p>A nossa equipa de técnicos certificados está preparada para resolver qualquer problema com os seus dispositivos eletrônicos, garantindo soluções rápidas e eficientes.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="ri-team-line"></i>
+                            <h4>Equipe Qualificada</h4>
+                            <p>Técnicos certificados e experientes</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-tools-line"></i>
+                            <h4>Equipamentos Modernos</h4>
+                            <p>Ferramentas de última geração</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-medal-line"></i>
+                            <h4>Garantia Total</h4>
+                            <p>Todos os serviços com garantia</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-price-tag-3-line"></i>
+                            <h4>Preços Justos</h4>
+                            <p>Orçamentos transparentes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image-wrapper">
+                    <img src="https://readdy.ai/api/search-image?query=Professional technology repair team working in modern electronics workshop with computers smartphones and tools clean organized workspace blue and white color scheme professional lighting&width=600&height=700&seq=about-team&orientation=portrait" alt="Equipe EMMATECH" class="about-image">
+                    <div class="about-image-card">
+                        <h3>3+</h3>
+                        <p>Anos de Experiência</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>5000+</h3>
+                    <p>Clientes Satisfeitos</p>
+                </div>
+                <div class="stat-card">
+                    <h3>15000+</h3>
+                    <p>Reparações Realizadas</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p>Taxa de Sucesso</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Suporte Disponível</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para atender você. Entre em contato através dos nossos canais ou preencha o formulário.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Telefone</h4>
+                            <p><a href="tel:+244939601868">+244 939 601 868</a></p>
+                            <p><a href="tel:+244956094669">+244 956 094 669</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:contato@emmatechnologya@gmail.com">contato@emmatechnologya@gmail.com</a></p>
+                            <p><a href="mailto:suporte@emmanueldanger676@gmail.com">suporte@emmanueldanger676@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Endereço</h4>
+                            <p>>Gamek a Direita, Rua da Farmhouse, Luanda<br>Angola</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda - Sexta: 08:00 - 18:00<br>Sábado: 09:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+244 900 000 000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="ri-send-plane-line"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">EMMATECH</div>
+                <p>Soluções técnicas especializadas para todos os seus dispositivos eletrônicos em Luanda.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Serviços</h3>
+                <a href="#services">Reparação de Computadores</a>
+                <a href="#services">Desbloqueio de Telemóveis</a>
+                <a href="#services">Serviços PlayStation 3</a>
+                <a href="#services">Sistemas Operativos</a>
+                <a href="#services">Venda de Jogos</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <a href="#home">Início</a>
+                <a href="#services">Serviços</a>
+                <a href="#about">Sobre Nós</a>
+                <a href="#contact">Contato</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <p><i class="ri-phone-line"></i> +244 939 601 868</p>
+                <p><i class="ri-mail-line"></i> contato@emmatechnologya@gmail.com</p>
+                <p><i class="ri-map-pin-line"></i> Gamek a Direita, Rua da Farmhouse, Luanda</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 EMMATECH. Todos os direitos reservados. | Website Builder: <a href="https://emmanueldanger676@gmail.com" target="_blank">emmanueldanger676@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Agent Widget -->
+    <div class="agent-widget">
+        <button class="agent-button" onclick="alert('Widget de chat/voz em breve!')">
+            <i class="ri-customer-service-2-fill"></i>
+        </button>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+
+            // Simple validation
+            of (formData.name && formData.email && formData.message) {
+                alert('Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.');
+                contactForm.reset();
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Animate stats on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-card, .service-card, .hero-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
